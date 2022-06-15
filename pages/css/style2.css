@@ -1,0 +1,71 @@
+body {
+    margin: auto;
+    width: 640px;
+    padding: 50px;
+    font-family: Jost;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    justify-items: center;
+}
+
+/* Centered Image Code */
+
+div {
+    display: flex;
+    justify-content: center;
+    padding: 55px;
+    font-weight: bold;
+}
+
+#background{
+    content: "";
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),url('../pexels-dom-j-310452.jpg') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+.cta{
+    display: flex;
+    align-items: center;
+    color: white;
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cta:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 4px));
+    width: 45px;
+    height: 45px;
+    background: #dc143c;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0, 0, .5, 2);
+    z-index: -1;
+    justify-content: center;
+}
+
+.cta:hover::before{
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0, 0, .5, 2), width .25s .25s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta i{
+    margin-left: 5px;
+    transition: transform .25s .4s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta:hover i{
+    transform: translateX(3px);
+}
